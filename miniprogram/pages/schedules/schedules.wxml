@@ -1,0 +1,7 @@
+<view class="container">
+模式：{{type}}
+
+
+
+
+</view>
