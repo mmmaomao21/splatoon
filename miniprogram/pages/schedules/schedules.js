@@ -3,6 +3,7 @@ const app = getApp()
 Page({
   data: {
     type: '',
+    result:null
   },
 
   onLoad: function (options) {
@@ -16,12 +17,19 @@ Page({
       type: options.type
     })
 
-    if (app.globalData.openid) {
-      this.setData({
-        openid: app.globalData.openid
-      })
-    }
+    wx.request({
+      url: 'https://splatoon2.ink/data/coop-schedules.json',
+      type:'GET',
+      success:function(res){
+        if(res.statusCode===200){
+          this.setData({
+            result:res.data
+          })
+        }
+        console.log(res)
+      }
+    })
 
-    console.groupEnd()
+
   },
 })
