@@ -1,5 +1,5 @@
 const app = getApp()
-
+const utils=require('../../utils/utils');
 Page({
   data: {
     type: '',
@@ -7,15 +7,15 @@ Page({
   },
 
   onLoad: function (options) {
-    console.log(options)
-    
-    let typeMap={
-      salmon:'打工'
-    };
 
     this.setData({
-      type: options.type
+      type: utils.gameTypeMap[options.type]
     })
+    this.getGameData(options.type);
+  },
+
+  getGameData:function(type){
+    let url=type==='salmon'?'https://splatoon2.ink/data/coop-schedules.json':'https://splatoon2.ink/data/schedules.json';
 
     wx.request({
       url: 'https://splatoon2.ink/data/coop-schedules.json',
@@ -25,11 +25,14 @@ Page({
           this.setData({
             result:res.data
           })
+          this.initPage(res.data)
         }
         console.log(res)
       }
     })
 
-
   },
+  initPage:function(data){
+    console.log(data);
+  }
 })

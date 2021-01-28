@@ -3,19 +3,25 @@
 
   <view class="uploader">
     <navigator url="../schedules/schedules?type=regular" open-type="navigate" class="uploader-text">
-      <text>涂地模式</text>
+      <text>{{map['regular']}}</text>
+    </navigator>
+  </view>
+
+  <view class="uploader">
+    <navigator url="../schedules/schedules?type=league" open-type="navigate" class="uploader-text">
+      <text>{{map['league']}}</text>
     </navigator>
   </view>
 
   <view class="uploader">
     <navigator url="../schedules/schedules?type=ranked" open-type="navigate" class="uploader-text">
-      <text>真格</text>
+      <text>{{map['ranked']}}</text>
     </navigator>
   </view>
 
   <view class="uploader">
     <navigator url="../schedules/schedules?type=salmon" open-type="navigate" class="uploader-text">
-      <text>打工模式</text>
+      <text>{{map['salmon']}}</text>
     </navigator>
   </view>
 </view>
