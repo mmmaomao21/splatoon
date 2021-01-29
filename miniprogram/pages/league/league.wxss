@@ -1,0 +1,45 @@
+@import "../../style/guide.wxss";
+
+.salmon-detail-list {
+  margin-bottom: 1.6rpx;
+}
+.salmon-detail-list .title {
+  display: block;
+}
+.salmon-detail-list .card {
+  padding: 0.4rpx;
+  border: 6rpx solid;
+  border-radius: 8rpx;
+  width: 100%;
+  display: inline-block;
+}
+.salmon-detail-list .card .card-title {
+  width: 100%;
+  display: block;
+  font-size: 32rpx;
+  border-bottom: 0.4rpx dashed;
+  padding-bottom: 0.4rpx;
+  margin-bottom: 0.6rpx;
+}
+.salmon-detail-list .card .card-title image {
+  width: 70rpx;
+  height:70rpx;
+  margin-right: 6rpx;
+  vertical-align: sub;
+}
+.salmon-detail-list .card .card-content image {
+  width: 300rpx;
+  height:300rpx;
+  border-radius: 10rpx;
+ float:left
+
+}
+.salmon-detail-list .card .card-content .weapon {
+ float:left
+}
+.salmon-detail-list .card .card-content .weapon image {
+  border-radius: 0;
+  width: 70rpx;
+  height:70rpx;
+  height100rpx
+}

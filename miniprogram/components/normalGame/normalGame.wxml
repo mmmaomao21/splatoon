@@ -1,0 +1,7 @@
+<view class="">
+  
+  <div wx:for="{{gameDataList}}">
+    {{item['stage_a'].name}}
+  </div>
+</view>
+

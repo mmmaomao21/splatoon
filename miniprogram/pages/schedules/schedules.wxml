@@ -1,7 +1,11 @@
 <view class="container">
 模式：{{type}}
 
-
+<div class='salmon-detail-list'>
+                    <div class='title'>NOW</div>
+                   
+              
+                  </div>
 
 
 </view>

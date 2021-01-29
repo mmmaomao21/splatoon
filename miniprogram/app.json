@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/openapi/serverapi/serverapi",
-    "pages/schedules/schedules"
+    "pages/regular/regular",
+    "pages/schedules/schedules",
+    "pages/salmon/salmon",
+    "pages/gachi/gachi",
+    "pages/league/league"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -10,6 +12,37 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "Splatoon2",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "rgba(0,0,0,0.65)",
+    "selectedColor": "#f54910",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/regular.png",
+        "iconPath": "images/regular.png",
+        "pagePath": "pages/regular/regular",
+        "text": "涂地"
+      },
+      {
+        "selectedIconPath": "images/gachi.png",
+        "iconPath": "images/gachi.png",
+        "pagePath": "pages/gachi/gachi",
+        "text": "真格"
+      },
+      {
+        "selectedIconPath": "images/league.png",
+        "iconPath": "images/league.png",
+        "pagePath": "pages/league/league",
+        "text": "组队"
+      },
+      {
+        "selectedIconPath": "images/salmon.png",
+        "iconPath": "images/salmon.png",
+        "pagePath": "pages/salmon/salmon",
+        "text": "打工"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

@@ -1,0 +1,6 @@
+<div class="page">
+   <normalGame
+    style="width: 100%; height: 100%"
+    type="regular"
+  />
+</div>
