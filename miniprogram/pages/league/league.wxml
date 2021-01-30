@@ -1,43 +1,6 @@
 <div class="page">
-  <div wx:for="{{Coop.details}}" wx:key="unique" class='salmon-detail-list'>
-    <div class='title'>{{index === 0 ? 'NOW' : 'NEXT'}}</div>
-    <div class='card'>
-      <div class='card-title'>
-       <image 
-        src="../../images/salmon.png" 
-        mode="aspectFit"
-      />
-      <span>{{item.startTimeFormat}} - {{item.endTimeFormat}}</span>
-    
-      </div>
-
-      <div class='card-content'>
-        <image src="{{imgConstant+item.stage.image}}"  mode="aspectFit"/>
-        <span class='weapon' wx:for="{{item.weapons}}" wx:for-item="w" wx:key="unique" >
-          <image src="{{imgConstant+w.weapon.image}}" title="{{w.weapon.name}}"  mode="aspectFit"/>
-        </span>
-        <span>{{item.stage.name}}</span>
-
-      </div>
-    </div>
-  </div>
-
-  <div class='salmon-detail-list'>
-  <div class='title'>MORE</div>
-  <div class='card'>
-    <div wx:for="{{ Coop.schedules}}" wx:key="unique">
-    <div class='card-title'>
-      <image 
-        src="../../images/salmon.png" 
-        mode="aspectFit"
-      />
-      <span>{{item.startTimeFormat}} - {{item.endTimeFormat}}</span>
-    </div>
-  </div>
-  </div>
+   <normalGame
+    style="width: 100%; height: 100%"
+    type="league"
+  />
 </div>
-
-
-</div>
-
-
