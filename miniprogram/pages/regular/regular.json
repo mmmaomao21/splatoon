@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "通常比赛",
+  "navigationBarTitleText": "涂地",
   "usingComponents": {
     "normalGame": "/components/normalGame/normalGame"
   }

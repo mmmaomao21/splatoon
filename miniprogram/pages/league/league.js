@@ -8,7 +8,9 @@ Page({
   },
 
   onLoad: function (options) {
-
+    utils.getGameData('league').then(res=>{
+      this.setData({gameDataList:res})
+    });
    
   },
 })

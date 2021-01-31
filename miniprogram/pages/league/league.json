@@ -1,4 +1,6 @@
 {
-  "navigationBarTitleText": "鲑鱼打工",
-  "usingComponents": {}
+  "navigationBarTitleText": "联盟",
+  "usingComponents": {
+    "normalGame": "/components/normalGame/normalGame"
+  }
 }

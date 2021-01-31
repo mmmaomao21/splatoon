@@ -13,5 +13,7 @@
       <span>{{item['stage_b'].name}}</span>
     </div>
   </div>
+
+  <div >MORE</div>
 </view>
 

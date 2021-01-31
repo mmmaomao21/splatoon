@@ -3,12 +3,13 @@ const utils = require('../../utils/utils');
 Page({
   data: {
     type: '',
-    Coop: {},
-    imgConstant: 'https://splatoon2.ink/assets/splatnet/'
+    gameDataList:[]
   },
 
   onLoad: function (options) {
-
+    utils.getGameData('gachi').then(res=>{
+      this.setData({gameDataList:res})
+    });
   },
 
 })
