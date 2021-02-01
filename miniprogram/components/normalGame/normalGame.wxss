@@ -6,7 +6,7 @@
   position: relative;
 }
 .normal-game .game-list-item .stage-card image{
-  width: 50%;
+  width: 50vw;
   height: 100px;
 }
 .normal-game .game-list-item .stage-card span{
@@ -16,5 +16,13 @@
   color:#fff;
   display: inline-block;
   background: rgba(0,0,0,0.8);
-  font-size: 14px;
+  font-size: 30rpx;
+  width: 50vw;
+  padding: 8rpx 0rpx;
+}
+
+.more-block{
+  display: block;
+  text-align:center;
+  margin-top: 20rpx;
 }
