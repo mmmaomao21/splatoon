@@ -8,7 +8,6 @@ Component({
   },
   observers: {
     game: function (game) {
-      console.log(this.data);
       if (!game.length) {
         return;
       }
@@ -20,7 +19,8 @@ Component({
 
   data: {
     gameDataList: [],
-    imgConstant: 'https://splatoon2.ink/assets/splatnet/',
+    // imgConstant: 'https://splatoon2.ink/assets/splatnet/',
+    imgConstant: '../..',
     showMore:false
   },
 

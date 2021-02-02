@@ -1,6 +1,9 @@
 <div class="page">
   <div wx:for="{{Coop.details}}" wx:key="unique" class='salmon-detail-list'>
-    <div class='title'>{{index === 0 ? 'NOW' : 'NEXT'}}</div>
+    <div class='title'>
+    {{index === 0 ? 'NOW' : 'NEXT'}}
+    <!-- <span  wx:if="{{gearImg && index === 0}}" class='salmon-gear'><image src="{{imgConstant+gearImg}}" mode="aspectFit"/></span> -->
+    </div>
     <div class='card'>
       <div class='card-title'>
        <image 
@@ -8,14 +11,15 @@
         mode="aspectFit"
       />
       <span>{{item.startTimeFormat}} - {{item.endTimeFormat}}</span>
+      <image wx:if="{{gearImg && index === 0}}" src="{{imgConstant+gearImg}}" mode="aspectFit" class='salmon-gear'/>
       </div>
 
       <div class='card-content'>
-        <image src="{{imgConstant+item.stage.image}}"  mode="aspectFit"/>
+        <image src="{{'../..'+item.stage.image}}"  mode="aspectFit"/>
         <span class='weapon' wx:for="{{item.weapons}}" wx:for-item="w" wx:key="unique" >
           <image src="{{imgConstant+w.weapon.image}}" title="{{w.weapon.name}}"  mode="aspectFit"/>
         </span>
-        <span>{{item.stage.name}}</span>
+        <span>{{item.stageName}}</span>
 
       </div>
     </div>
@@ -25,7 +29,7 @@
   <div class='title'>MORE</div>
   <div class='card'>
     <div wx:for="{{ Coop.schedules}}" wx:key="unique">
-    <div class='card-title'>
+    <div class='card-title' wx:if="{{index>1}}">
       <image 
         src="../../images/salmon.png" 
         mode="aspectFit"

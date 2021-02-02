@@ -5,12 +5,12 @@
     </span>
     <div class="stage-card">
       <image src="{{imgConstant+item['stage_a'].image}}" mode="widthFix"/>
-      <span>{{item['stage_a'].name}}</span>
+      <span>{{item['stage_a_name']}}</span>
     </div>
 
     <div class="stage-card">
       <image src="{{imgConstant+item['stage_b'].image}}" mode="widthFix"/>
-      <span>{{item['stage_b'].name}}</span>
+      <span>{{item['stage_b_name']}}</span>
     </div>
   </div>
 
