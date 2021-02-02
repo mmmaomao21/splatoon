@@ -42,6 +42,14 @@ Component({
         gameDataList:this.properties.game
       })
     },
+    preview:function(event){
+        console.log(event.currentTarget.dataset.src)
+        let currentUrl = event.currentTarget.dataset.src
+        wx.previewImage({
+          current: currentUrl, // 当前显示图片的http链接
+          urls: [currentUrl] // 需要预览的图片http链接列表
+        })
+    }
 
   }
 

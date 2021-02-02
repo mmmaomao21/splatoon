@@ -35,7 +35,7 @@ const stageNameMap={
 
 const formatDate = (str) => {
   let time = new Date(str * 1000);
-  return `${("0" + (time.getMonth() + 1)).slice(-2)}/${("0" + time.getDate()).slice(-2)} ${("0" + time.getHours()).slice(-2)}:00`;
+  return `${((time.getMonth() + 1))}/${(time.getDate())} ${("0" + time.getHours()).slice(-2)}:00`;
 }
 
 const transStage=(stage)=>{

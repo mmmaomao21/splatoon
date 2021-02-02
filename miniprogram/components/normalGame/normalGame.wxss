@@ -1,5 +1,14 @@
+.normal-game{
+  display: flex;
+  flex-direction: column;
+}
 .normal-game .game-list-item{
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  
+  margin-bottom: 20rpx;
+}
+
+.game-list-item .time{
+  display: block;
 }
 
 .normal-game .game-list-item .stage-card{
