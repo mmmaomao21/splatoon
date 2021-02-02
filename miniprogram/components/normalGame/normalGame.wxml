@@ -1,5 +1,9 @@
 <view class="normal-game">
   <div wx:for="{{gameDataList}}" wx:key="unique" class="game-list-item">
+    
+    <span>
+      <image src="/images/splat-decorators.png"  mode="aspectFit"></image>
+    </span>
     <span class="time">
       {{item['start_time']}} - {{item['end_time']}}
     </span>

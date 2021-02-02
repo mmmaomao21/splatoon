@@ -20,17 +20,14 @@
   height: 100px;
 }
 .normal-game .game-list-item .stage-card span{
+  bottom: 20rpx;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  color:#fff;
-  display: inline-block;
-  background: rgba(0,0,0,0.8);
-  font-size: 30rpx;
-  width: 50vw;
-  padding: 8rpx 0rpx;
-  padding-left: 10rpx;
-
+  right: 10rpx;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 4px 6px;
+  font-size: 10px;
+  border-radius: 8px;
 }
 
 .more-block{

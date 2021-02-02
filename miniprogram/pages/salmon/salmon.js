@@ -45,7 +45,6 @@ Page({
             item['endTimeFormat'] = utils.formatDate(item['end_time']);
             item['stageName']=stageMap[item.stage.name];
             // item['stageName']=item.stage.name;
-
           })
 
           target.schedules.forEach(item => {
@@ -58,7 +57,7 @@ Page({
           })
         }
       },
-      error:()=>{
+      fail:()=>{
         wx.hideLoading()
         wx.stopPullDownRefresh()
       }

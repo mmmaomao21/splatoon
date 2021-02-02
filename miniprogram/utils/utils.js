@@ -71,7 +71,7 @@ const getGameData=(type,refresh)=>{
             resolve(formatData(target[type]))
           }
         },
-        error:()=>{
+        fail:()=>{
           wx.hideLoading();
         wx.stopPullDownRefresh();
 
