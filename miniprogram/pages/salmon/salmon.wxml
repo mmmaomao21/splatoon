@@ -15,7 +15,7 @@
       </div>
 
       <div class='card-content'>
-        <image src="{{item.stage.image}}"  mode="aspectFit"/>
+        <image src="{{icloudPath+item.stage.image}}"  mode="aspectFit"/>
         <div class="left">
           <span class='weapon' wx:for="{{item.weapons}}" wx:for-item="w" wx:key="unique" >
           <image src="{{imgConstant+w.weapon.image}}" title="{{w.weapon.name}}"  mode="aspectFit"/>

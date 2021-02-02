@@ -21,7 +21,8 @@ Component({
     gameDataList: [],
     // imgConstant: 'https://splatoon2.ink/assets/splatnet/',
     imgConstant: '../..',
-    showMore:false
+    showMore:false,
+    icloudPath:'cloud://master-2g7pj0ip716784f4.6d61-master-2g7pj0ip716784f4-1304928350'
   },
 
  
@@ -38,12 +39,14 @@ Component({
   methods: {
     showMore:function(){
       this.setData({
-        showMore:true,
-        gameDataList:this.properties.game
+        showMore:!this.data.showMore,
+      },()=>{
+        this.setData({
+        gameDataList:this.data.showMore?this.properties.game:this.properties.game.slice(0,2)
+        })
       })
     },
     preview:function(event){
-        console.log(event.currentTarget.dataset.src)
         let currentUrl = event.currentTarget.dataset.src
         wx.previewImage({
           current: currentUrl, // 当前显示图片的http链接

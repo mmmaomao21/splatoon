@@ -6,7 +6,8 @@ Page({
     Coop: {},
     imgConstant: 'https://splatoon2.ink/assets/splatnet',
     // imgConstant: '../..',
-    gearImg:null
+    gearImg:null,
+    icloudPath:'cloud://master-2g7pj0ip716784f4.6d61-master-2g7pj0ip716784f4-1304928350'
   },
 
   onLoad: function (options) {
@@ -14,7 +15,11 @@ Page({
     this.setData({
       type: utils.gameTypeMap[options.type]
     })
-    this.getGameData(options.type);
+    this.getGameData();
+  },
+
+  onPullDownRefresh:function(){
+    this.getGameData()
   },
 
   getGameData() {
@@ -23,26 +28,23 @@ Page({
       'Ruins of Ark Polaris':'方舟'
     }
 
-
     //timeline
-    wx.showToast({title: '加载中', icon: 'loading'});
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.request({
       url: 'https://splatoon2.ink/data/coop-schedules.json',
       type: 'GET',
       success: (res) => {
-        wx.hideToast();
-
+        wx.hideLoading();
+        wx.stopPullDownRefresh();
         if (res.statusCode === 200) {
           let target = res.data;
-          // const formatDate = (str) => {
-          //   let time = new Date(str * 1000);
-          //   return `${((time.getMonth() + 1))}/${(time.getDate())} ${("0" + time.getHours()).slice(-2)}:00`;
-          // }
           target.details.forEach(item => {
             item['startTimeFormat'] = utils.formatDate(item['start_time']);
             item['endTimeFormat'] = utils.formatDate(item['end_time']);
-            // item['stageName']=stageMap[item.stage.name];
-            item['stageName']=item.stage.name;
+            item['stageName']=stageMap[item.stage.name];
+            // item['stageName']=item.stage.name;
 
           })
 
@@ -55,6 +57,10 @@ Page({
             Coop: target
           })
         }
+      },
+      error:()=>{
+        wx.hideLoading()
+        wx.stopPullDownRefresh()
       }
     })
 

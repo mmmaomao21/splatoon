@@ -44,9 +44,9 @@
 }
 
 .salmon-detail-list .card .card-content .name{
-  /* position: absolute;
-  top: 400rpx; */
-    right: 0;
+  position: absolute;
+  top: 400rpx;
+    right: 10rpx;
     background: rgba(0,0,0,0.7);
     color: #fff;
     padding: 4px 6px;

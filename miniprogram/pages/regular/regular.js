@@ -38,6 +38,10 @@ Page({
     //   })
     // }
   },
-
+  onPullDownRefresh:function(){
+    utils.getGameData('regular','refresh').then(res=>{
+      this.setData({gameDataList:res})
+    });
+  },
 
 })

@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/regular/regular",
-    "pages/schedules/schedules",
     "pages/salmon/salmon",
     "pages/gachi/gachi",
     "pages/league/league"

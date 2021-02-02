@@ -13,4 +13,9 @@ Page({
     });
    
   },
+  onPullDownRefresh:function(){
+    utils.getGameData('league','refresh').then(res=>{
+      this.setData({gameDataList:res})
+    });
+  },
 })

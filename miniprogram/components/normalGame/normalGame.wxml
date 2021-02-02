@@ -4,19 +4,30 @@
       {{item['start_time']}} - {{item['end_time']}}
     </span>
     <div class="stage-card">
-      <image src="{{item['stage_a'].image}}" 
-      data-src="{{item['stage_a'].image}}" 
+      <image src="{{icloudPath+item['stage_a'].image}}" 
+      data-src="{{icloudPath+item['stage_a'].image}}" 
       mode="widthFix"
+      bindtap="preview"
       />
       <span>{{item['stage_a_name']}}</span>
     </div>
 
     <div class="stage-card">
-      <image src="{{item['stage_b'].image}}" mode="widthFix"/>
+      <image src="{{icloudPath+item['stage_b'].image}}" 
+      data-src="{{icloudPath+item['stage_b'].image}}" 
+      mode="widthFix"
+      bindtap="preview"
+      />
       <span>{{item['stage_b_name']}}</span>
     </div>
   </div>
 
-  <div wx:if="{{!showMore}}" bindtap="showMore" class="more-block">MORE</div>
+  <div bindtap="showMore" class="more-block">
+    <image 
+        src="/images/favicon.jpg" 
+        mode="aspectFit"
+      />
+    {{!showMore?'All Stages':'Collapse'}}
+  </div>
 </view>
 

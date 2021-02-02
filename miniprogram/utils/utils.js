@@ -38,10 +38,6 @@ const formatDate = (str) => {
   return `${((time.getMonth() + 1))}/${(time.getDate())} ${("0" + time.getHours()).slice(-2)}:00`;
 }
 
-const transStage=(stage)=>{
-  return `${stage}000`
-}
-
 const formatData=(res)=>{
     let target=res.map(item=>{
       return {
@@ -56,15 +52,19 @@ const formatData=(res)=>{
     return target;
 }
 
-const getGameData=(type)=>{
+const getGameData=(type,refresh)=>{
   return new Promise((resolve, reject)=>{
-    if (!app.globalData.gameData) {
-      wx.showToast({title: '加载中', icon: 'loading'});
+    if (!app.globalData.gameData || refresh) {
+      wx.showLoading({
+        title: '加载中',
+      })
       wx.request({
         url: 'https://splatoon2.ink/data/schedules.json',
         type: 'GET',
         success: (res) => {
-        wx.hideToast();
+        wx.hideLoading();
+        wx.stopPullDownRefresh();
+
           if (res.statusCode === 200) {
             let target = res.data;
             app.globalData.gameData = target;
@@ -72,7 +72,9 @@ const getGameData=(type)=>{
           }
         },
         error:()=>{
-          wx.hideToast();
+          wx.hideLoading();
+        wx.stopPullDownRefresh();
+
           reject()
         }
       })

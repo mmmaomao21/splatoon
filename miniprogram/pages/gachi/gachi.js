@@ -11,5 +11,10 @@ Page({
       this.setData({gameDataList:res})
     });
   },
+  onPullDownRefresh:function(){
+    utils.getGameData('gachi','refresh').then(res=>{
+      this.setData({gameDataList:res})
+    });
+  },
 
 })
