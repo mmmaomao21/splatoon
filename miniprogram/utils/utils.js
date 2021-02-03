@@ -33,6 +33,13 @@ const stageNameMap={
   "Wahoo World":'游乐场',
 }
 
+const modeMap={
+  'rainmaker':'鱼',
+  'clam_blitz':'蛤蜊',
+  'splat_zones':'区域',
+  'tower_control':'塔'
+}
+
 const formatDate = (str) => {
   let time = new Date(str * 1000);
   return `${((time.getMonth() + 1))}/${(time.getDate())} ${("0" + time.getHours()).slice(-2)}:00`;
@@ -46,6 +53,7 @@ const formatData=(res)=>{
         'end_time':formatDate(item['end_time']),
         'stage_a_name':stageNameMap[item['stage_a'].name],
         'stage_b_name':stageNameMap[item['stage_b'].name],
+        'gameMode':modeMap[item.rule.key],
       }
     })
 
