@@ -1,5 +1,9 @@
 <view class="normal-game">
   <div wx:for="{{gameDataList}}" wx:key="unique" class="game-list-item">
+    <span class="state-badge" wx:if="{{index===0}}">NOW</span>
+    <span class="state-badge next-state" wx:elif="{{index===1}}">NEXT</span>
+    <span class="state-badge future-state" wx:elif="{{index===2}}">FUTURE</span>
+
     <span class="time">
       {{item['start_time']}} - {{item['end_time']}}
     </span>
@@ -27,7 +31,8 @@
         src="/images/favicon.jpg" 
         mode="aspectFit"
       />
-    {{!showMore?'All Stages':'Collapse'}}
+      <span>more</span>
+    <!-- {{!showMore?'All Stages':'Collapse'}} -->
   </div>
 </view>
 

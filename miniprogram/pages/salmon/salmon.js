@@ -24,8 +24,11 @@ Page({
 
   getGameData() {
     const stageMap={
-      'Spawning Grounds':'大坝',
-      'Ruins of Ark Polaris':'方舟'
+      'Spawning Grounds':'鲑来坝',
+      'Ruins of Ark Polaris':'方舟',
+      'Salmonid Smokeyard':'鲑鱼熏工坊',
+      'Lost Outpost':'海上集落',
+      'Marooner':'破船',
     }
 
     //timeline
