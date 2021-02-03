@@ -5,8 +5,9 @@
     <span class="state-badge future-state" wx:elif="{{index===2}}">FUTURE</span>
 
     <span class="time">
-      <span wx:if="{{type!=='regular'}}">{{item.gameMode}}</span>
       {{item['start_time']}} - {{item['end_time']}}
+      <span class="mode" wx:if="{{type!=='regular'}}">{{item.gameMode}}</span>
+
     </span>
     <div class="stage-card">
       <image src="{{icloudPath+item['stage_a'].image}}" 

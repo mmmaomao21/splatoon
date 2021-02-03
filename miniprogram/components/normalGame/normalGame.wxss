@@ -10,6 +10,16 @@
 .game-list-item .time{
   display: block;
   padding-left: 10rpx;
+  padding-bottom: 8rpx;
+}
+
+.game-list-item .time .mode{
+  display: inline-block;
+  border-radius: 6px;
+  font-size: 12px;
+  background: rgba(122, 122, 122, 0.8);
+  color:#fff;
+  padding: 0 4px;
 }
 
 .normal-game .game-list-item .stage-card{
@@ -65,7 +75,7 @@
   border-left-color:#19d719;
 }
 
-.next-state{
+.future-state{
   color:#f02d7d;
   border-left-color:#f02d7d;
 }
