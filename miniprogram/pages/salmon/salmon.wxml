@@ -18,7 +18,9 @@
         <image src="{{imgConstant+item.stage.image}}"  mode="aspectFit"/>
         <div class="left">
           <span class='weapon' wx:for="{{item.weapons}}" wx:for-item="w" wx:key="unique" >
-          <image src="{{imgConstant+w.weapon.image}}" title="{{w.weapon.name}}"  mode="aspectFit"/>
+          <image wx:if="{{w.weapon}}" src="{{imgConstant+w.weapon.image}}" mode="aspectFit"/>
+
+          <image wx:if="{{w.coop_special_weapon}}" src="{{imgConstant+w.coop_special_weapon.image}}" mode="aspectFit"/>
         </span>
         <span class='name'>{{item.stageName}}</span>
       </div>

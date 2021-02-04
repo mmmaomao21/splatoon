@@ -19,7 +19,8 @@ Component({
 
   data: {
     gameDataList: [],
-    imgConstant: 'https://splatoon2.ink/assets/splatnet/',
+    imgConstant: 'https://splatoon2.ink/assets/splatnet',
+    localPath:'../..',
     showMore: false,
     icloudPath: 'cloud://master-2g7pj0ip716784f4.6d61-master-2g7pj0ip716784f4-1304928350'
   },

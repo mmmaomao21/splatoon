@@ -46,7 +46,10 @@ Page({
             item['startTimeFormat'] = utils.formatDate(item['start_time']);
             item['endTimeFormat'] = utils.formatDate(item['end_time']);
             item['stageName']=stageMap[item.stage.name];
-            // item['stageName']=item.stage.name;
+            if(item.stage.name.indexOf('aroon')>0){
+              item['stageName']='破船'
+            }
+            
           })
 
           target.schedules.forEach(item => {

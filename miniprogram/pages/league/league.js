@@ -4,7 +4,6 @@ Page({
   data: {
     type: '',
     Coop: {},
-    imgConstant: 'https://splatoon2.ink/assets/splatnet/'
   },
 
   onLoad: function (options) {
