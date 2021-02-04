@@ -34,7 +34,6 @@
         mode="aspectFit"
       />
       <span>more</span>
-    <!-- {{!showMore?'All Stages':'Collapse'}} -->
   </div>
 </view>
 

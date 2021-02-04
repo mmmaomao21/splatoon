@@ -4,7 +4,7 @@ const app = getApp()
 Component({
   properties: {
     type: String,
-    game:Array,
+    game: Array,
   },
   observers: {
     game: function (game) {
@@ -12,7 +12,7 @@ Component({
         return;
       }
       this.setData({
-        gameDataList: this.data.showMore?game:game.slice(0,2)
+        gameDataList: this.data.showMore ? game : game.slice(0, 2)
       });
     },
   },
@@ -20,40 +20,35 @@ Component({
   data: {
     gameDataList: [],
     imgConstant: 'https://splatoon2.ink/assets/splatnet/',
-    showMore:false,
-    icloudPath:'cloud://master-2g7pj0ip716784f4.6d61-master-2g7pj0ip716784f4-1304928350'
+    showMore: false,
+    icloudPath: 'cloud://master-2g7pj0ip716784f4.6d61-master-2g7pj0ip716784f4-1304928350'
   },
-
- 
 
   lifetimes: {
     attached() {
     }
   },
 
-  pageLifetimes:{
+  pageLifetimes: {
   },
 
-
   methods: {
-    showMore:function(){
+    showMore: function () {
       this.setData({
-        showMore:!this.data.showMore,
-      },()=>{
+        showMore: !this.data.showMore,
+      }, () => {
         this.setData({
-        gameDataList:this.data.showMore?this.properties.game:this.properties.game.slice(0,2)
+          gameDataList: this.data.showMore ? this.properties.game : this.properties.game.slice(0, 2)
         })
       })
     },
-    preview:function(event){
-        let currentUrl = event.currentTarget.dataset.src
-        wx.previewImage({
-          current: currentUrl, // 当前显示图片的http链接
-          urls: [currentUrl] // 需要预览的图片http链接列表
-        })
+    preview: function (event) {
+      let currentUrl = event.currentTarget.dataset.src
+      wx.previewImage({
+        current: currentUrl, // 当前显示图片的http链接
+        urls: [currentUrl] // 需要预览的图片http链接列表
+      })
     }
 
   }
-
-
 })
