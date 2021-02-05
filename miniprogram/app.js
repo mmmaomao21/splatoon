@@ -4,6 +4,5 @@ App({
     gameData: null
   },
   onLaunch() {
-
-  }
+  },
 })

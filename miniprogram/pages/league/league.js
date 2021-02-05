@@ -7,14 +7,17 @@ Page({
   },
 
   onLoad: function (options) {
-    utils.getGameData('league').then(res=>{
-      this.setData({gameDataList:res})
+    utils.getGameData('league').then(res => {
+      this.setData({ gameDataList: res })
     });
-   
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
   },
-  onPullDownRefresh:function(){
-    utils.getGameData('league','refresh').then(res=>{
-      this.setData({gameDataList:res})
+  onPullDownRefresh: function () {
+    utils.getGameData('league', 'refresh').then(res => {
+      this.setData({ gameDataList: res })
     });
   },
 })
