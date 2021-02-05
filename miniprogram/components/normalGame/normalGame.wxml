@@ -10,7 +10,7 @@
 
     </span>
     <div class="stage-card">
-      <image src="{{imgConstant+item['stage_a'].image}}" 
+      <image src="{{localPath+item['stage_a'].image}}" 
       data-src="{{imgConstant+item['stage_a'].image}}" 
       mode="widthFix"
       bindtap="preview"
@@ -19,7 +19,7 @@
     </div>
 
     <div class="stage-card">
-      <image src="{{imgConstant+item['stage_b'].image}}" 
+      <image src="{{localPath+item['stage_b'].image}}" 
       data-src="{{imgConstant+item['stage_b'].image}}" 
       mode="widthFix"
       bindtap="preview"
