@@ -1,3 +1,4 @@
+<notification wx:if="{{showError}}"></notification>
 <div class="page" wx:if="{{Coop.details}}">
   <div wx:for="{{Coop.details}}" wx:key="unique" class='salmon-detail-list'>
     <div class='title'>

@@ -1,0 +1,17 @@
+.tips{
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  color:#fff;
+  /* background:rgba(0,0,0,0.5); */
+  background:rgba(255,73,75,0.9);
+
+  /* border-radius: 8px; */
+    /* top: 40vh; */
+    /* padding: 8px 6px; */
+    /* width: 50vw;
+    left: 25vw; */
+    padding: 4px 0;
+    text-align: center;
+    font-size: 12px;
+}

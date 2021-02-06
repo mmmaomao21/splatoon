@@ -1,5 +1,8 @@
 {
   "navigationBarTitleText": "打工",
-  "usingComponents": {},
-  "enablePullDownRefresh": true
+  "usingComponents": {
+    "notification": "/components/notification/notification"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
 }

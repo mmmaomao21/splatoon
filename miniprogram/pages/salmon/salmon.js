@@ -7,8 +7,8 @@ Page({
     imgConstant: "https://splatoon2.ink/assets/splatnet",
     localPath: "../..",
     gearImg: null,
-    icloudPath:
-      "cloud://master-2g7pj0ip716784f4.6d61-master-2g7pj0ip716784f4-1304928350",
+    icloudPath: 'cloud://master-2g7pj0ip716784f4.6d61-master-2g7pj0ip716784f4-1304928350',
+    showError:false
   },
 
   onLoad: function (options) {
@@ -36,11 +36,12 @@ Page({
 
     //timeline
     wx.showLoading({
-      title: "加载中",
-    });
+      title: '加载中',
+    })
+    this.setData({showError:false})
     wx.request({
-      url: "https://splatoon2.ink/data/coop-schedules.json",
-      type: "GET",
+      url: 'https://splatoon2.ink/data/coop-schedules.json',
+      type: 'GET',
       success: (res) => {
         wx.hideLoading();
         wx.stopPullDownRefresh();
@@ -53,12 +54,11 @@ Page({
             if (item.stage.name.indexOf("aroon") > 0) {
               item["stageName"] = "破船";
             }
-          });
-
-          target.schedules.forEach((item) => {
-            item["startTimeFormat"] = utils.formatDate(item["start_time"]);
-            item["endTimeFormat"] = utils.formatDate(item["end_time"]);
-          });
+          })
+          target.schedules.forEach(item => {
+            item['startTimeFormat'] = utils.formatDate(item['start_time']);
+            item['endTimeFormat'] = utils.formatDate(item['end_time']);
+          })
 
           this.setData({
             Coop: target,
@@ -66,10 +66,11 @@ Page({
         }
       },
       fail: () => {
-        wx.hideLoading();
+        wx.hideLoading()
         wx.stopPullDownRefresh();
-      },
-    });
+        this.setData({showError:true})
+      }
+    })
 
     // 打工奖励图片
     wx.request({

@@ -1,5 +1,7 @@
 {
   "component": true,
-  "usingComponents": {},
+  "usingComponents": {
+    "notification": "/components/notification/notification"
+  },
   "enablePullDownRefresh": true
 }

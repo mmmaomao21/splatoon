@@ -4,9 +4,7 @@ const app = getApp();
 Component({
   properties: {
     type: String,
-    game: Array,
   },
-
   data: {
     gameDataList: [],
     triggered: false,
@@ -15,15 +13,18 @@ Component({
     showMore: false,
     icloudPath:
       "cloud://master-2g7pj0ip716784f4.6d61-master-2g7pj0ip716784f4-1304928350",
+      showError:false
   },
 
   lifetimes: {
-    attached() {
+    attached: function() {
       this.getGameData(this.properties.type);
     },
   },
 
-  pageLifetimes: {},
+  pageLifetimes: {
+   
+  },
 
   methods: {
     showMore: function () {
@@ -47,6 +48,7 @@ Component({
       });
     },
     getGameData: function (type, refresh) {
+    this.setData({showError:false});
       if (!app.globalData.gameData || refresh) {
         wx.showLoading({
           title: "加载中",
@@ -56,7 +58,6 @@ Component({
           type: "GET",
           success: (res) => {
             wx.hideLoading();
-
             this.setData({
               triggered: false,
             });
@@ -75,6 +76,7 @@ Component({
             wx.hideLoading();
             this.setData({
               triggered: false,
+              showError:true
             });
           },
         });
