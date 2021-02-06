@@ -1,7 +1,5 @@
 {
   "navigationBarTitleText": "联盟",
-  "enablePullDownRefresh": true,
-
   "usingComponents": {
     "normalGame": "/components/normalGame/normalGame"
   }

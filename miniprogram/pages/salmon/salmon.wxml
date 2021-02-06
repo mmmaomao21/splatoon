@@ -37,7 +37,7 @@
         src="/images/salmon.png" 
         mode="aspectFit"
       />
-      <span>{{item.startTimeFormat}} ~ {{item.endTimeFormat}}</span>
+      <span>{{item.startTimeFormat}} - {{item.endTimeFormat}}</span>
     </div>
   </div>
   </div>

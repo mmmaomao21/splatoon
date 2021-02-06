@@ -1,6 +1,5 @@
 {
   "navigationBarTitleText": "涂地",
-  "enablePullDownRefresh": true,
   "usingComponents": {
     "normalGame": "/components/normalGame/normalGame"
   }

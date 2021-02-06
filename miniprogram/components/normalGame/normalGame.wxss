@@ -1,81 +1,80 @@
-.normal-game{
+.normal-game {
   display: flex;
   flex-direction: column;
 }
-.normal-game .game-list-item{
-  
+.normal-game .game-list-item {
   margin-bottom: 20rpx;
 }
 
-.game-list-item .time{
+.game-list-item .time {
   display: block;
   padding-left: 10rpx;
   padding-bottom: 8rpx;
 }
 
-.game-list-item .time .mode{
+.game-list-item .time .mode {
   display: inline-block;
   border-radius: 6px;
   font-size: 12px;
   background: rgba(122, 122, 122, 0.8);
-  color:#fff;
-  padding: 0 4px;
+  color: #fff;
+  padding: 2px 4px;
 }
 
-.normal-game .game-list-item .stage-card{
+.normal-game .game-list-item .stage-card {
   position: relative;
 }
-.normal-game .game-list-item .stage-card image{
+.normal-game .game-list-item .stage-card image {
   width: 50vw;
   height: 100px;
 }
-.normal-game .game-list-item .stage-card span{
+.normal-game .game-list-item .stage-card span {
   bottom: 20rpx;
   position: absolute;
   right: 10rpx;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   padding: 4px 6px;
   font-size: 10px;
   border-radius: 8px;
 }
 
-.more-block{
+.more-block {
   /* display: inline-block;
   margin: 50rpx auto; */
   color: #ff470f;
   font-size: 10px;
   position: fixed;
   right: 10rpx;
-  bottom: 10rpx;
+  bottom: 90rpx;
   z-index: 999;
   width: 70rpx;
 }
 
-.more-block span{
+.more-block span {
   font-weight: 800;
 }
 
-.more-block image{
+.more-block image {
   width: 60rpx;
   height: 60rpx;
 }
 
-.state-badge{
-  font-size:16px;
+.state-badge {
+  font-size: 16px;
   font-weight: 600;
-  color:#ff470f;
-  border-left:4px solid #ff470f;
+  color: #ff470f;
+  border-left: 4px solid #ff470f;
   display: inline-block;
   padding: 0px 6px;
 }
 
-.next-state{
-  color:#19d719;
-  border-left-color:#19d719;
+.next-state {
+  color: #19d719;
+  border-left-color: #19d719;
 }
 
-.future-state{
-  color:#f02d7d;
-  border-left-color:#f02d7d;
+.future-state {
+  color: #f02d7d;
+  border-left-color: #f02d7d;
 }

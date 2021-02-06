@@ -1,3 +1,24 @@
+<div bindtap="showMore" class="more-block" wx:if="{{gameDataList.length>0}}">
+    <image 
+        src="/images/favicon.jpg" 
+        mode="aspectFit"
+      />
+      <span>more</span>
+  </div>
+<scroll-view
+  scroll-y 
+  style="width: 100%;height:100vh "
+  refresher-enabled="{{true}}"
+  enable-back-to-top="{{true}}"
+  refresher-threshold="{{100}}"
+  refresher-default-style="black"
+  refresher-triggered="{{triggered}}"
+  bindrefresherpulling="onPulling"
+  bindrefresherrefresh="onRefresh"
+  bindrefresherrestore="onRestore"
+  bindrefresherabort="onAbort"
+>
+
 <view class="normal-game">
   <div wx:for="{{gameDataList}}" wx:key="unique" class="game-list-item">
     <span class="state-badge" wx:if="{{index===0}}">NOW</span>
@@ -28,12 +49,7 @@
     </div>
   </div>
 
-  <div bindtap="showMore" class="more-block">
-    <image 
-        src="/images/favicon.jpg" 
-        mode="aspectFit"
-      />
-      <span>more</span>
-  </div>
+ 
 </view>
 
+</scroll-view>

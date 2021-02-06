@@ -2,6 +2,5 @@
    <normalGame
     style="width: 100%; height: 100%"
     type="regular"
-    game="{{gameDataList}}"
   />
 </div>
